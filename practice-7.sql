@@ -19,4 +19,6 @@
 SELECT listings.property_type, COUNT(*), reviews.date_reviewed
 FROM listings
 INNER JOIN reviews ON reviews.id = listings.id
-GROUP BY listings.property_type;
+GROUP BY listings.property_type
+ORDER BY reviews.date_reviewed DESC;
+
